@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>VueJs - Guia completo</title>
+    <script type="text/javascript" src="https://unpkg.com/vue"></script>
+</head>
+  
+<body>
+    <div id="App">
+       <button v-on:click= "incrementar">Clique</button>
+       <p>Botão Clicado {{ cliques }} vezes</p>
+       
+    </div>
+    <script type="text/javascript">
+      
+      new Vue({
+          el: '#App',
+          data:{
+              cliques: 0
+          },
+          methods:{
+              incrementar: function() {
+                  this.cliques++;
+              }
+          }
+
+      });  
+    </script>
+</body>
+</html>
